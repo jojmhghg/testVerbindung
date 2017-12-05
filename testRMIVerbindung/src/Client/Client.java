@@ -22,7 +22,8 @@ public class Client {
      * @throws java.rmi.RemoteException
      * @throws java.rmi.NotBoundException
      */
-    public static void main(String[] args) throws RemoteException, NotBoundException {
+    public static void main(String[] args) throws RemoteException, NotBoundException {    
+        System.out.println("starte Client!");
         
         Registry registry = LocateRegistry.getRegistry("25.23.112.58", 1099);
         ServerStub stub = (ServerStub) registry.lookup("ServerStub");
