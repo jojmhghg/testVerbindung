@@ -30,7 +30,8 @@ public class Client {
         
         System.out.println("verbunden"); 
         
-        stub.langeFunktion(10000);
+        new FloodingThreads(stub, 10000).start();
+        
         System.out.println(stub.hallo("tim"));
     }
     
