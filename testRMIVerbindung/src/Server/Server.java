@@ -27,7 +27,7 @@ public class Server {
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         System.out.println("starte Server!");
                 
-        System.setProperty("java.rmi.server.hostname", "25.23.112.58");
+        System.setProperty("java.rmi.server.hostname", "localhost");
         
         ServerStubImpl serverLauncher = new ServerStubImpl();
         ServerStub serverStub = (ServerStub)UnicastRemoteObject.exportObject(serverLauncher, 0);

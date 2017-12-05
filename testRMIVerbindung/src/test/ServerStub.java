@@ -15,4 +15,6 @@ import java.rmi.RemoteException;
 public interface ServerStub extends Remote{
     
     public String hallo(String string) throws RemoteException;
+    
+    public void langeFunktion(int time) throws RemoteException;
 }

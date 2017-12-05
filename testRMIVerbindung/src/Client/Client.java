@@ -25,10 +25,12 @@ public class Client {
     public static void main(String[] args) throws RemoteException, NotBoundException {    
         System.out.println("starte Client!");
         
-        Registry registry = LocateRegistry.getRegistry("25.23.112.58", 1099);
+        Registry registry = LocateRegistry.getRegistry("localhost", 1099);
         ServerStub stub = (ServerStub) registry.lookup("ServerStub");
         
-        System.out.println("verbunden");     
+        System.out.println("verbunden"); 
+        
+        stub.langeFunktion(10000);
         System.out.println(stub.hallo("tim"));
     }
     
